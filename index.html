@@ -1,4 +1,4 @@
-<?php
+
 <!DOCTYPE html>
 <head>
     <title>Student Registration</title>
@@ -56,26 +56,6 @@
 
 </body>
 </html>
-
-include 'config.php';
-
-// Get data from form
-$name = $_POST['name'];
-$rollno = $_POST['rollno'];
-$city = $_POST['city'];
-$class = $_POST['class'];
-$branch = $_POST['branch'];
-$sub_branch = $_POST['sub_branch'];
-
-// Insert into database
-$sql = "INSERT INTO students (name, rollno, city, class, branch, sub_branch)
-        VALUES ('$name', '$rollno', '$city', '$class', '$branch', '$sub_branch')";
-
-if ($conn->query($sql) === TRUE) {
-    echo "Student registered successfully! <a href='index.php'>Go back</a>";
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
 
 $conn->close();
 ?>
