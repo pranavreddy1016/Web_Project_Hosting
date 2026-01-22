@@ -1,7 +1,5 @@
-<?php include 'config.php'; ?>
-
+<?php
 <!DOCTYPE html>
-<html>
 <head>
     <title>Student Registration</title>
     <style>
@@ -57,7 +55,8 @@
     </form>
 
 </body>
-</html><?php
+</html>
+
 include 'config.php';
 
 // Get data from form
